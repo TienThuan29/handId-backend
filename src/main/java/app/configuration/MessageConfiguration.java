@@ -1,0 +1,12 @@
+package app.configuration;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MessageConfiguration {
+
+    public final String ERROR_USERNAME_PASSWORD_INVALID = "Username or password is incorrect!";
+
+    public final String ERROR_LOGIN_SESSION_EXPIRED = "Login session expired! Please login again!";
+
+}

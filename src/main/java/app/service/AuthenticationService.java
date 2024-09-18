@@ -75,6 +75,7 @@ public class AuthenticationService {
                 .fullname(registerRequest.getFullname())
                 .enable(registerRequest.isEnable())
                 .password(passwordEncoder.encode(registerRequest.getPassword()))
+                .phone(registerRequest.getPhone())
                 .role(Role.USER)
                 .build();
 
@@ -156,6 +157,7 @@ public class AuthenticationService {
                 .username(user.getUsername())
                 .fullname(user.getFullname())
                 .phone(user.getPhone())
+                .role(user.getRole().name())
                 .build();
     }
 

@@ -34,6 +34,7 @@ public class SecurityConfiguration {
 
     private final LogoutService logoutService;
 
+    //"/api/student/images/**"   :  Api test to get images form db
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -44,7 +45,7 @@ public class SecurityConfiguration {
                 )
                 .authorizeHttpRequests(
                         request -> request
-                                .requestMatchers(constant.API_ALL_AUTH, constant.API_ALL_VIDEO) // constant.API_ALL_AUTH, "http://127.0.0.1:5000/**"
+                                .requestMatchers(constant.API_ALL_AUTH)
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated()

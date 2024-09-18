@@ -1,11 +1,9 @@
 package app.controller;
 
 import app.dto.request.AuthenticationRequest;
-import app.dto.request.RegisterRequest;
 import app.dto.response.AuthenticationResponse;
 import app.exception.def.InvalidTokenException;
 import app.exception.def.InvalidUsernamePasswordException;
-import app.exception.def.NotFoundException;
 import app.service.AuthenticationService;
 import app.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;

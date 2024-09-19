@@ -30,7 +30,7 @@ public class ImageDataService {
 
 //String roleNumber
     public String saveImagesToDB(String roleNumber) throws IOException {
-//        roleNumber = (roleNumber == null || roleNumber.isEmpty()) ? UUID.randomUUID().toString().substring(1,6) : roleNumber;
+        roleNumber = (roleNumber == null || roleNumber.isEmpty()) ? UUID.randomUUID().toString().substring(1,6) : roleNumber;
         File folder = new File(constant.LOCAL_IMAGES_PATH);
         File[] files = folder.listFiles((dir, name) -> name.endsWith(".jpg") || name.endsWith(".png"));
         if (files != null) {

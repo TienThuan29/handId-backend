@@ -27,7 +27,6 @@ public class VideoService {
 
     private final ConstantConfiguration constant;
 
-    private final ImageDataService imageDataService;
 
     public String extractVideo(String filepath) {
         String videoFullPath = constant.LOCAL_VIDEO_PATH + "\\" + filepath;
@@ -44,7 +43,6 @@ public class VideoService {
                 );
                 //System.out.println("Processing video at: " + videoFullPath);
                 videoFile.delete();
-                imageDataService.saveImagesToDB();
                 return "Video processed successfully!";
             }
             else {

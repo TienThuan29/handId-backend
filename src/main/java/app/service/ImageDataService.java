@@ -29,7 +29,8 @@ public class ImageDataService {
     }
 
 //String roleNumber
-    public String saveImagesToDB() throws IOException {
+    public String saveImagesToDB(String roleNumber) throws IOException {
+//        roleNumber = (roleNumber == null || roleNumber.isEmpty()) ? UUID.randomUUID().toString().substring(1,6) : roleNumber;
         File folder = new File(constant.LOCAL_IMAGES_PATH);
         File[] files = folder.listFiles((dir, name) -> name.endsWith(".jpg") || name.endsWith(".png"));
         if (files != null) {
@@ -42,11 +43,11 @@ public class ImageDataService {
                     handImages.add(binaryImage);
                 }
             }
-            String roleNumberTest = UUID.randomUUID().toString().substring(1,6);
-            ImageData imageData = new ImageData(roleNumberTest, handImages);
+            //String roleNumberTest = UUID.randomUUID().toString().substring(1,6);
+            ImageData imageData = new ImageData(roleNumber, handImages);
             imageDataRepository.save(imageData);
             deleteAllImagesAtLocal(files);
-            return ("Images for role number " + roleNumberTest + " saved successfully.");
+            return ("Images for role number " + roleNumber + " saved successfully.");
         }
         else {
             return ("No image files found in the folder.");

@@ -22,4 +22,6 @@ public class UserDTO {
     @JsonProperty("role")
     private String role;
 
+    @JsonProperty("isEnable")
+    private boolean isEnable;
 }

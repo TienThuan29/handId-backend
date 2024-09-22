@@ -66,7 +66,7 @@ public class SecurityConfiguration {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(List.of(constant.UI_BASE_URL));  // "http://127.0.0.1:5000"
+        corsConfiguration.setAllowedOrigins(List.of(constant.UI_BASE_URL));
         corsConfiguration.setAllowedMethods(
                 List.of(
                         "GET", "POST", "PUT", "DELETE"

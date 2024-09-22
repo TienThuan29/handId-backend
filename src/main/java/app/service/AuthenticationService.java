@@ -73,7 +73,7 @@ public class AuthenticationService {
         User user = User.builder()
                 .username(registerRequest.getUsername())
                 .fullname(registerRequest.getFullname())
-                .enable(registerRequest.isEnable())
+                .enable(Boolean.TRUE)
                 .password(passwordEncoder.encode(registerRequest.getPassword()))
                 .phone(registerRequest.getPhone())
                 .role(Role.USER)

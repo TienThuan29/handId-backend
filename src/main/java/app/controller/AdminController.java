@@ -2,7 +2,6 @@ package app.controller;
 
 import app.dto.request.RegisterRequest;
 import app.dto.request.UpdateStaffRequest;
-import app.dto.response.AuthenticationResponse;
 import app.dto.response.Response;
 import app.service.AdminService;
 import app.service.AuthenticationService;

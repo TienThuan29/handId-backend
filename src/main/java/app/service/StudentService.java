@@ -6,8 +6,7 @@ import app.model.StudentUni;
 import app.repository.StudentUniRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.sql.SQLOutput;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -28,6 +27,10 @@ public class StudentService {
                 .isExist(exist)
                 .message(message)
                 .build();
+    }
+
+    public List<StudentUni> getAllStudents() {
+        return uniRepository.findAll();
     }
 
 }

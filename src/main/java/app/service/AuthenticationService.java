@@ -158,6 +158,7 @@ public class AuthenticationService {
                 .fullname(user.getFullname())
                 .phone(user.getPhone())
                 .role(user.getRole().name())
+                .isEnable(user.isEnable())
                 .build();
     }
 
